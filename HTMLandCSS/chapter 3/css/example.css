@@ -1,9 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    color: rgb(90, 70, 43);
+    background-color: rgb(255, 255, 255);
+}
+
+table {
+    border-spacing: 0px;
+}
+
 th {
-    color: rgb(117, 94, 63);
-    background-color: rgb(253, 202, 196);
+    padding: 5px 30px 5px 10px;
+    border-spacing: 0px;
+    font-size: 90%;
+    font: bold;
+    margin: 0px;
+    color: rgb(90, 70, 43);
+    background-color: rgb(214, 181, 177);
+    text-align: center;
+    border-top: 0.5px solid;
+    border-bottom: 0.5px  solid;
+    border-right: 0.5px solid;
+    border-left: 0.5px solid;
     
+}
+
+td {
+    padding: 5px 30px 5px 10px;
+    border-spacing: 0px;
+    font-size: 90%;
+    margin: 0px;
+    background-color: rgb(248, 222, 219) ;
+    color: rgb(97, 78, 53);
+    text-align: center;
+    border-top: 0.5px solid;
+    border-bottom: 0.5px  solid;
+    border-right: 0.5px solid;
+    border-left: 0.5px solid;
 }
 
 p {
 
 }
+ul {
+    text-align: left;
+    list-style-image: 
+}
+h1 {
+    text-align: center;
+}
+
+body {
+    margin: 200px;
+}
+
+li {
+    list-style-image: url(../css/images/star.png);
+    line-height: 1.6em;
+}
+fieldset {
+    width: 310px;
+    margin-top: 20px;
+    border: 2px solid rgb(97, 78, 53);
+    background-color: rgb(248, 222, 219);
+
+}
+
+legend {
+    font: bold;
+}
+
+input[type="submit"] {
+    background-color: rgb(214, 181, 177);
+    border: 2xp solid rgb(97, 78, 53)
+}
+
+input[type="submit"]:hover {
+    color: rgb(248, 222, 219);
+    background-color: rgb(97, 78, 53);
+}
+
