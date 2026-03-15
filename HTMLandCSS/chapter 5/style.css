@@ -108,3 +108,8 @@ header, section, footer, aside, nav, article, figure, figcaption {
             font-size: 80%;
             padding: 7px 0px 0px 20px;
         }
+        p, article ol, article ul {
+        text-align: justify; 
+        padding-right: 20px;
+        padding-left: 20px;
+        }
