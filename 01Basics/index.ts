@@ -14,15 +14,14 @@ function renderUserDetails(user: User) {
     console.log(user.name, user.age)
 }
 
-const user: User {
+const user: User = {
     id: "asd",
     name: "Kyle",
     age: 23,
     address: {
         street: "puukuju",
-        city: string
+        city: "linn"
     }
 
-}
-
-renderUserDetails(user)
+};
+renderUserDetails(user);
