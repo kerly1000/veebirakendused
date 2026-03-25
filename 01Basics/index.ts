@@ -9,19 +9,30 @@ type User = {
     }
 }
 
-//soovin näidata ainut name ja age, aga võetakse kogu objekti sisu, kuna kasutatakse user type
+//soovin näidata ainult name ja age, aga võetakse kogu objekti sisu
+//kuna kasutatakse User type
 function renderUserDetails(user: User) {
     console.log(user.name, user.age)
 }
 
-const user: User = {
-    id: "asd",
-    name: "Kyle",
-    age: 23,
-    address: {
-        street: "puukuju",
-        city: "linn"
-    }
+function renderUserDetails1(user: Pick<User, "name" | "age">){
+    console.log(user.name, user.age)
+}
 
-};
-renderUserDetails(user);
+const user: User = {
+    id: "ads",
+    name: "Kyle",
+    age: 123,
+    address: {
+        street: "sdf",
+        city: "London"
+    }
+}
+
+renderUserDetails(user)
+renderUserDetails1({name: "Nipitiri", age: 123})
+
+//NB! selleks, et näha konsoolis tulemust
+//1. tsc tsFailiNimi.ts
+//2. genereerib js faili
+//3. node index.js käsklus tuleb sisestada
