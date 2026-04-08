@@ -1,44 +1,43 @@
 type HangmanWordProps = {
     guessedLetters: string[],
-    wordToGuess: string, 
+    wordToGuess: string,
     reveal?: boolean
 }
-    
 
-export function HangmanWord({ guessedLetters, wordToGuess, reveal = false }:
+
+export function HangmanWord({guessedLetters , wordToGuess, reveal = false }: 
     HangmanWordProps) {
 
-        const word = "test"
-        //const guessedLetters = ["t", "e", "s"]
+        //const word = "test"
+        //guessedLetters = ["t", "e", "s"]
 
     return (
-        <div
-            style={{
-                display: "flex",
-                gap: ".25em",
-                fontSize: "6rem",
-                fontWeight: "bold",
+        <div 
+            style={{ 
+                display: "flex", 
+                gap: ".25em", 
+                fontSize: "6rem", 
+                fontWeight: "bold", 
                 textTransform: "uppercase",
-                fontFamily: "monospace"
+                fontFamily: "monospace",
                 }}
             >
                 {wordToGuess.split("").map((letter, index) => (
-                    <span style={{ borderBottom: ".1em solid black" }} key={index}>
-                        <span
-                            style={{
-                                visibility: guessedLetters.includes(letter) || reveal
-                                    ? "visible"
-                                    : "hidden",
-                                color: !guessedLetters.includes(letter) && reveal 
-                                    ? "red"
-                                    : "black"
-                            }}
-                        >
-                            {letter}
-                        </span>
+                  <span style={{ borderBottom: ".1em solid black" }} key={index}>
+                    <span
+                      style={{
+                        visibility: guessedLetters.includes(letter) || reveal 
+                            ? "visible" 
+                            : "hidden",
+                        color: !guessedLetters.includes(letter) && reveal 
+                            ? "red" 
+                            : "black"
+                      }}                    
+                    >
+                        {letter}
                     </span>
-                ))}   
-        </div>         
-    )    
+                </span>  
+            ))}
+        </div>
+    )
 }
-

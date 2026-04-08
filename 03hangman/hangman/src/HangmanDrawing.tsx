@@ -1,13 +1,14 @@
+/*n��d on tegemist d�naamilise kujutisega ja sellep�rast paneme erladi constanti alla*/
 const HEAD = (
     <div
         style={{
             width: "50px",
             height: "50px",
             borderRadius: "100%",
-            backgroundColor: "10px solid black",
+            border: "10px solid black",
             position: "absolute",
             top: "50px",
-            right: "30px"
+            right: "-30px"
         }}
     />
 )
@@ -17,7 +18,7 @@ const BODY = (
         style={{
             width: "10px",
             height: "100px",
-            backgroundColor: "black",
+            background: "black",
             position: "absolute",
             top: "120px",
             right: 0
@@ -30,7 +31,7 @@ const RIGHT_ARM = (
         style={{
             width: "100px",
             height: "10px",
-            backgroundColor: "black",
+            background: "black",
             position: "absolute",
             top: "150px",
             right: "-100px",
@@ -45,7 +46,7 @@ const LEFT_ARM = (
         style={{
             width: "100px",
             height: "10px",
-            backgroundColor: "black",
+            background: "black",
             position: "absolute",
             top: "150px",
             right: "10px",
@@ -60,7 +61,7 @@ const RIGHT_LEG = (
         style={{
             width: "100px",
             height: "10px",
-            backgroundColor: "black",
+            background: "black",
             position: "absolute",
             top: "210px",
             right: "-90px",
@@ -75,7 +76,7 @@ const LEFT_LEG = (
         style={{
             width: "100px",
             height: "10px",
-            backgroundColor: "black",
+            background: "black",
             position: "absolute",
             top: "210px",
             right: "0px",
@@ -85,53 +86,53 @@ const LEFT_LEG = (
     />
 )
 
-//tegemist on dünaamilise komponendiga, mis joonistab meest vastavalt sellele, mitu
-//valesti arvatud tähte on. Iga valesti arvatud tht lisab ühe kehaosa.
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+
+//seda kohe alguses ei lisa: { numberOfGuesses } : HangmanDrawingProps
 
 type HangmanDrawingProps = {
     numberOfGuesses: number
 }
 
-export function HangmanDrawing({ numberofGuesses }: HangmanDrawingProps) {
+export function HangmanDrawing({ numberOfGuesses } : HangmanDrawingProps) {
     return (
-        //alguses tuleb teha jalam koos postiga, mille külge kehaosad kinnituvad.
+        /*alguses tuleb teha jalam koos postiga*/
         <div style={{ position: "relative" }}>
-            {BODY_PARTS.slice(0, numberofGuesses)}
+            {BODY_PARTS.slice(0, numberOfGuesses)}
             <div
                 style={{
-                    width: "50px",
-                    height: "10px",
-                    backgroundColor: "black",
-                    position: "absolute",
-                    top: "0px",
-                    right: "0px"
-                }}
-         
-            /> 
-            <div
-                style={{
-                    width: "200px",
-                    height: "10px",
-                    backgroundColor: "black",
-                    marginLeft: "120px"
-                }} 
-            />  
-            <div
-                style={{
+                    height: "50px",
                     width: "10px",
-                    height: "400px",
-                    backgroundColor: "black",
-                    marginLeft: "120px"
-                }} 
-            /> 
-             <div
+                    background: "black",
+                    position: "absolute",
+                    top: 0,
+                    right: 0
+                }}
+            />
+            <div
                 style={{
-                    width: "250px",
                     height: "10px",
-                    backgroundColor: "black",
-                }} 
-            /> 
+                    width: "200px",
+                    background: "black",
+                    marginLeft: "120px"
+                }}
+            />
+            <div
+                style={{
+                    height: "400px",
+                    width: "10px",
+                    background: "black",
+                    marginLeft: "120px"
+                }}
+            />
+            <div
+                style={{
+                    height: "10px",
+                    width: "250px",
+                    background: "black"
+                }}
+            />
+
         </div>
     )
 }
