@@ -23,7 +23,8 @@ export function Keyboard({
     return (
         <div 
             style={{ 
-            display: "flex", 
+            display: "grid", 
+            width: "800px",
             gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr))", 
             gap: ".5em" 
         }}
