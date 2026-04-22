@@ -2,9 +2,10 @@ import sql from "mssql"
 
 
 export const dbConfig: sql.config = {
-    user: "paneEndaArvutiNimi",
+    user: "TTHK\opilane",
     password: "",
-    server: ""
+    server: "localhost",
+    database: ""
     //pärast saab juurde kirjutada
 }
 
