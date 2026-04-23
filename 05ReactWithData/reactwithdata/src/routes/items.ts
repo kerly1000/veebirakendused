@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as controller from "../controllers/itemsControllers"
+import * as controller from "../controllers/itemsControllers.ts"
 
 const router = Router();
 //router käsitleb navigatsiooni erinevate vaadete vahel

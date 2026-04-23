@@ -2,12 +2,14 @@ import sql from "mssql"
 
 
 export const dbConfig: sql.config = {
-    user: "TTHK\opilane",
+    user: "DESKTOP-8KMFQ1G\User",
     password: "",
-    server: "localhost",
-    database: ""
-    //pärast saab juurde kirjutada
-}
+    server: "localhost\SQLEXPRESS",
+    database: "ReactData"
+    options: {
+        encrypt: false, //peab olema false, et ära laeks
+    }
+};
 
 export const poolPromise = new sql.ConnectionPool(dbConfig)
     .connect()
