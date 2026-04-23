@@ -1,7 +1,6 @@
 
 
-
-export default function ItemList({ items, onDelete}: any) {
+export default function ItemList ({ items, onDelete}: any) {
     return (
         <ul>
             {items.map((i: any) => (
@@ -11,5 +10,5 @@ export default function ItemList({ items, onDelete}: any) {
                 </li>
             ))}
         </ul>
-    )
+    );
 }
