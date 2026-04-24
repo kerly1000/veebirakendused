@@ -6,7 +6,7 @@ export const getItems = async (_: Request, res: Response) => {
     res.json(items);
 }
 
-export const createItem = async (reg: Request, res: Response) => {
+export const createItem = async (req: Request, res: Response) => {
     await service.addItem(req.body.name);
     res.sendStatus(201); //201 = created
 }

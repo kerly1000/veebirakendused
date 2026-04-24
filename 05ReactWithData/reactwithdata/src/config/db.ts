@@ -5,10 +5,11 @@ export const dbConfig: sql.config = {
     user: "DESKTOP-8KMFQ1G\User",
     password: "",
     server: "localhost\SQLEXPRESS",
-    database: "ReactData"
+    database: "ReactData",
     options: {
-        encrypt: false, //peab olema false, et ära laeks
-    }
+        encrypt: false //peab olema false, et ära laeks
+        }
+            
 };
 
 export const poolPromise = new sql.ConnectionPool(dbConfig)
