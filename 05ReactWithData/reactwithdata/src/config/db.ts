@@ -2,13 +2,21 @@ import sql from "mssql"
 
 
 export const dbConfig: sql.config = {
-    user: "DESKTOP-8KMFQ1G\User",
-    password: "",
-    server: "localhost\SQLEXPRESS",
+    server: "localhost",
+    port : 1433,
     database: "ReactData",
     options: {
         encrypt: false //peab olema false, et ära laeks
+        },
+    authentication: {
+        type: "ntlm",
+        options: {
+            domain: "DESKTOP-8KMFQ1G",
+            userName: "USER",
+            password: ""
+            
         }
+    }
             
 };
 
