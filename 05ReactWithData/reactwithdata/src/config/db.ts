@@ -3,7 +3,7 @@ import sql from "mssql"
 
 export const dbConfig: sql.config = {
     server: "localhost",
-    port : 1433,
+    port : 4000,
     database: "ReactData",
     options: {
         encrypt: false //peab olema false, et ära laeks
