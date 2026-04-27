@@ -1,25 +1,15 @@
-import sql from "mssql"
-
+import sql from "mssql";
 
 export const dbConfig: sql.config = {
+    user: "sa",  // serveri kasutaja
+    password: "",  // kasutaja parool
     server: "localhost",
-    port : 4000,
-    database: "ReactData",
+    database: "ReactData",  // peab olema datavase tehtud ja ka tabel
     options: {
-        encrypt: false //peab olema false, et ära laeks
-        },
-    authentication: {
-        type: "ntlm",
-        options: {
-            domain: "DESKTOP-8KMFQ1G",
-            userName: "USER",
-            password: ""
-            
-        }
+        encrypt: false,  // ilma selleta ei lae serverit ära
     }
-            
 };
 
 export const poolPromise = new sql.ConnectionPool(dbConfig)
     .connect()
-    .then(pool => pool);
+    .then(pool => pool)
